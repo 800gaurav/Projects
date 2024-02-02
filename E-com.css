@@ -1,0 +1,491 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(181, 176, 176);
+}
+
+/*                               nav                   */
+nav {
+    width: 100%;
+    height: 15vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0%;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 35px;
+    margin-left: 15px;
+}
+
+nav ul {
+    text-decoration: none;
+    display: flex;
+    margin-right: 13px;
+
+}
+
+nav ul li {
+    list-style: none;
+    margin-inline: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+
+ul li a:hover {
+    color: rgb(13, 235, 235);
+    font-weight: 600;
+}
+
+ul li a:active {
+    color: green;
+    font-weight: 600;
+}
+
+.icon {
+    color: white;
+    display: none;
+    font-size: 25px;
+    align-items: center;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 120px;
+
+}
+
+.main_cont h1 {
+    font-size: 60px;
+    color: aqua;
+    margin-block: 5px;
+}
+
+.main_cont h2 {
+    font-size: 40px;
+
+}
+
+.main_cont p {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.main_cont button {
+    border: none;
+    font-size: 15px;
+    padding: 8px;
+    width: 100px;
+    background-color: aqua;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.main_cont button:hover {
+    background-color: rgb(10, 147, 10);
+    border: 1px solid black;
+    font-weight: 600;
+}
+
+.head {
+    padding: 85px;
+    text-align: center;
+}
+
+span {
+    color: orangered;
+}
+/*               cards              */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 60px;
+    text-align: center;
+
+
+
+}
+
+.cards img {
+    width: 300px;
+    height: 340px;
+    cursor: pointer;
+}
+
+.cards i {
+    color: orange;
+    margin-inline: 3px;
+}
+
+.cards h3 {
+    font-size: 20px;
+    margin-block: 8px;
+}
+                  /*          reviews          */
+
+
+.reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.reviews .rcard {
+    width: 270px;
+    height: 260px;
+    background-color: #fff;
+    text-align: center;
+    padding: 16px;
+    margin-inline: 20px;
+    border-radius: 4px;
+
+}
+
+.reviews .rcard:hover {
+    background-color: rgb(155, 154, 154);
+    transition: 1s ease;
+    cursor: pointer;
+
+}
+
+.reviews img {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+
+}
+
+.reviews p {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.reviews button {
+    width: 90px;
+    height: 30px;
+    background-color: rgb(3, 165, 165);
+    color: white;
+    border: none;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.blog {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+              /*         blog          */
+
+
+
+.blog .blogcard {
+    width: 300px;
+    height: auto;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid transparent;
+}
+
+.blogcard:hover {
+    transition: 1s ease;
+    background-color: gray;
+    cursor: pointer;
+}
+
+.blogcard img {
+    width: 100%;
+    height: 310px;
+}
+
+.blog .blogcard a {
+    padding: 4px 20px;
+    background-color: rgb(3, 151, 151);
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+
+}
+
+.blog .blogcard p {
+    margin-block: 10px;
+}
+                   /*            contact     */
+
+
+
+.connect {
+    text-align: center;
+}
+
+.connect input {
+    width: 380px;
+    padding: 8px;
+    font-size: 18px;
+    background-color: transparent;
+    margin-top: 11px;
+    border: 2px solid black;
+
+}
+
+.connect button {
+    width: 130px;
+    height: 36px;
+    background-color: rgb(1, 143, 143);
+    color: white;
+    font-size: 20px;
+    border: none;
+    margin-top: 22px;
+    cursor: pointer;
+}
+             /*           footer        */
+
+
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: black;
+    padding: 44px;
+    margin-top: 33px;
+    color: white;
+
+}
+
+.text p {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.text h2 {
+    margin-bottom: 13px;
+    font-size: 25px;
+}
+                         /*      itemPage      */
+
+
+
+.itemPage {
+    display: flex;
+    display: none;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.itemPage img {
+    width: 400px;
+}
+
+.itemtext h2,
+h3,
+input,
+a,
+p {
+    margin-block: 15px;
+}
+
+.itemtext h2 {
+    color: rgb(14, 141, 14);
+    font-size: 25px;
+}
+
+.itemtext input {
+    width: 50px;
+    padding: 4px;
+    font-size: 20px;
+}
+
+.itemtext a {
+    padding: 4px 20px;
+    background-color: orangered;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.itemtext a:hover {
+    cursor: pointer;
+}
+
+/*             buy-page               */
+.buypage {
+    display: none;
+    position: relative;
+    background-color: white;
+    border: 1px solid transparent;
+    padding: 20px;
+    width: 30%;
+    position: absolute;
+    top: 0px;
+    left: 405px;
+
+}
+
+.buytext {
+    margin: 8px 0 0 20px;
+
+}
+
+.buytext input,
+select {
+    width: 90%;
+    font-size: 13px;
+    border: none;
+    padding: 8px;
+    background-color: rgb(225, 220, 220);
+    outline: none;
+
+}
+
+.buytext button {
+    width: 40%;
+    text-align: center;
+    font-size: 13px;
+    border: none;
+    padding: 7px;
+    background-color: aqua;
+    border-radius: 2px;
+    margin-top: 8px;
+    cursor: pointer;
+
+}
+
+.buytext button:hover {
+    cursor: pointer;
+}
+
+.cross i {
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    font-size: 15px;
+
+}
+
+.cross i:hover {
+    cursor: pointer;
+
+}
+
+              /*                   media quarie        */
+
+
+
+
+@media only screen and (max-width:600px) {
+
+    .logo h1 {
+        font-size: 25px;
+    }
+
+    .icon {
+        display: flex;
+    }
+    /* .main{
+        margin-top: 200px;
+    } */
+
+    nav ul {
+        display: none;
+    }
+
+    .showdata {
+        display: flex;
+        background-color: gray;
+        flex-direction: column;
+        position: absolute;
+        top: 81px;
+        left: 0px;
+        gap: 22px;
+        border: 1px solid transparent;
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .main img {
+        width: 75%;
+
+    }
+
+
+    .connect input {
+        width: 75%;
+    }
+
+    .card img {
+        width: 75%;
+    }
+
+    .blogcard {
+        width: 75%;
+        margin-inline: 20px;
+    }
+
+    .itemPage img {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .itemtext {
+        margin-top: 10px;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .itemtext a {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-inline: 20px;
+    }
+
+    .main img {
+        margin-top: 30px;
+
+    }
+}
+
+@media only screen and (max-width:890px) {
+    .buypage {
+
+        position: absolute;
+        margin: 0 10px 0 10px;
+        width: 100%;
+        top: 574px;
+        left: 0px;
+
+    }
+}
