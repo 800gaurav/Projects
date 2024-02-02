@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather App</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            background-color: aqua;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .container {
+            width: 300px;
+            background-color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <input type="text" id="input" value=" " placeholder="Enter city name....">
+           
+            <button id="button">search</button>
+        </div>
+        <h2 id="city"></h2>
+        <!-- <img src="" alt="" class="image"> -->
+        <h2 id="tem"></h2>
+        <h2 id="type"></h2>
+
+        <h2 id="pra"></h2>
+
+    </div>
+
+    <script>
+
+        const city = document.querySelector("#city");
+        const temp = document.querySelector("#tem");
+        const type = document.querySelector("#type");
+        const input = document.querySelector("#input");
+        const condi = document.querySelector("#pra");
+        const btn = document.querySelector("#button");
+        const apiname = "0e1bd0225c7e7fbffffbeec37e28672f";
+
+        const data = async function (val) {
+            const getdata = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${val}&appid=${apiname}`)
+                .then(response => response.json())
+                .catch(error => alert("error"))
+
+      
+
+            if (getdata.cod == 404) {
+                alert("please enter right city name")
+            };
+
+
+            city.innerHTML = getdata.name;
+            temp.innerHTML = `${Math.floor(getdata.main.temp - 273)}°C`
+            type.innerHTML = getdata.weather[0].main
+
+            switch (type.innerHTML) {
+                case "Clouds":
+                    condi.innerHTML = "today cloud"
+                    break;
+                case "Fog":
+                    condi.innerHTML = "today fog"
+                    break;
+                case "Clear":
+                    condi.innerHTML = "today clear";
+                    break;
+                default:
+                    condi.innerHTML = " ";
+            };
+
+        }
+     
+
+        input.addEventListener("keyup", function (event) {
+            if (event.key == "Enter") {
+                data(this.value)
+                this.value = " ";
+            }
+        });
+
+        btn.addEventListener("click",function(){
+            search = input.value;
+            data(search)
+            input.value = " ";
+        })
+
+
+
+    </script>
+</body>
+
+
+</html>
